@@ -1,7 +1,10 @@
-import Head from "next/head"
-import Link from "next/link"
-import { useEffect, useState } from "react"
-import PageTitle from "../src/components/PageTitle"
+// import Head from "next/head"
+ import Link from "next/link"
+// import { useEffect, useState } from "react"
+// import PageTitle from "../src/components/PageTitle"
+import FAQScreen from '../src/screens/FAQScreen';
+
+export default FAQScreen;
 
 // export async function getServerSideProps() {
 // console.log("Roda a cada acesso que vc recebe")
@@ -20,36 +23,36 @@ export async function getStaticProps() {
   return {
     props: {
       Rafatuba: "Rafael",
-      faq
+      faq,
     },
   }
 }
 
-export default function Faq({faq}) {
+// export default function Faq({faq}) {
   
-  // const [faq, setFaq] = useState([]);
+//   // const [faq, setFaq] = useState([]);
 
-  // useEffect(() => {
+//   // useEffect(() => {
     
-  // }, [])
+//   // }, [])
 
-  return (
-    <div>
-        <PageTitle>FAQ - Alura Cases Campanha</PageTitle>
-      <h1>Perguntas Frequentes</h1>
-      <ul>
-        {faq.map(({answer, question}) => (
-          <li key={question}>
-            <article>
-            <h2>
-            {question}
-            </h2>
-            <p>{answer}</p>
-            </article>
-          </li>
-        ))}
-      </ul>
-        <Link href="/">Página Inicial</Link>
-    </div>
-  )
-}
+//   return (
+//     <div>
+//         <PageTitle>FAQ - Alura Cases Campanha</PageTitle>
+//       <h1>Perguntas Frequentes</h1>
+//       <ul>
+//         {faq.map(({answer, question}) => (
+//           <li key={question}>
+//             <article>
+//             <h2>
+//             {question}
+//             </h2>
+//             <p>{answer}</p>
+//             </article>
+//           </li>
+//         ))}
+//       </ul>
+//         <Link href="/">Página Inicial</Link>
+//     </div>
+//   )
+// }
